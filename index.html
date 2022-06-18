@@ -46,20 +46,24 @@
                     Letras prohibidas
                 </div>
                 <div>
-                    <input id="fobidden_letters" type="text" placeholder="">
+                    <input id="forbidden_letters" type="text" placeholder="Escribe aquí las letras prohibidas">
                 </div>
             </div>
             <div>
-                Letras obligatorias
-                <input id="required_letters" type="text" placeholder="">
+                <div>
+                    Letras obligatorias
+                </div>
+                <div>
+                    <input id="required_letters" type="text" placeholder="Escribe aquí las letras que quieras que aparezcan">
+                </div>
             </div>
         </div>
         <div>
             <b>Output</b><hr>
             <div id="output"></div>
         </div>
+        <py-script src="/src/random_words.py"></py-script>
     </div>
-    <py-script src="/src/script.py"></py-script>
 </body>
 
 </html>
