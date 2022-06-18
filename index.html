@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello, World!</title>
+    <title>Aprender a leer</title>
     <link rel="stylesheet" href="/pyscript.css" />
     <script defer src="/pyscript.js"></script>
     <style>
@@ -14,17 +14,20 @@
         .container {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-auto-rows: minmax(200px, auto);
+          /* grid-auto-rows: minmax(400px, auto); */
           grid-gap: 1em;
           margin-top: 1em;
         }
-        .container > div:first-child {
+        /* .container > div:first-child {
           grid-row: 1/3;
-        }
+        } */
         .container > div {
           background-color: #fff;
           box-shadow: 0px 5px 10px #ccc;
           padding: 10px;
+        }
+        .output_box {
+            font-size: 80px;
         }
     </style>
     <py-env>
@@ -35,12 +38,20 @@
 
 <body>
     <py-title>Aprende a leer</py-title>
+    <!-- <div class="instructions">
+        Genera palabras aleatorias con el número deseado de letras para aprender a leer. Se puede forzar a que las palabras tengan o no tengan determinadas letras
+    </div> -->
     <div class="container">
         <div>
-            <button>Nueva palabra</button>
+            <button>Click para nueva palabra</button><hr>
             <div>
-                <input type="range" min="2" max="10" value="5" class="slider" id="n_letters">
-            </div>
+                <div>
+                    Número de letras
+                </div>
+                <div>
+                    <input type="range" min="2" max="10" value="5" class="slider" id="n_letters">
+                </div>
+            </div><hr>
             <div>
                 <div>
                     Letras prohibidas
@@ -48,7 +59,7 @@
                 <div>
                     <input id="forbidden_letters" type="text" placeholder="Escribe aquí las letras prohibidas">
                 </div>
-            </div>
+            </div><hr>
             <div>
                 <div>
                     Letras obligatorias
@@ -59,8 +70,7 @@
             </div>
         </div>
         <div>
-            <b>Output</b><hr>
-            <div id="output"></div>
+            <div id="output" class="output_box"></div>
         </div>
         <py-script src="/src/random_words.py"></py-script>
     </div>
