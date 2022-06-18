@@ -51,11 +51,11 @@ def get_random_word(n_letters, forbidden_letters='', required_letters=''):
 LEN_TO_WORDS = download_data()
 
 def on_click(event):
-    n_letters = int(Element('n_letters').value)
-    # forbidden_letters = Element('forbidden_letters').value
-    # required_letters = Element('required_letters').value
-    output = Element('output')
-    output.write(get_random_word(n_letters, forbidden_letters='', required_letters=''))
+    n_letters = int(Element("n_letters").value)
+    forbidden_letters = Element('forbidden_letters').value
+    required_letters = Element('required_letters').value
+    output = Element("output")
+    output.write(get_random_word(n_letters, forbidden_letters, required_letters))
 
-button = document.querySelector('button')
-button.addEventListener('click', create_proxy(on_click))
+button = document.querySelector("button")
+button.addEventListener("click", create_proxy(on_click))
