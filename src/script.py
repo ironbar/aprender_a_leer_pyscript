@@ -1,13 +1,14 @@
-import urllib.request
 import random
+
 from pyodide import create_proxy
 
 
 def download_data():
+    # had to remove this because it does not work on pyscript
     # page = urllib.request.urlopen('https://raw.githubusercontent.com/mazyvan/most-common-spanish-words/master/most-common-spanish-words-v5.txt').read().decode()
+    # words = page.split('\n')
     with open('most-common-spanish-words-v5.txt', 'r') as f:
         words = f.read().split('\n')
-    # words = page.split('\n')
     len_to_words = {}
     for word in words:
         if len(word) not in len_to_words:
