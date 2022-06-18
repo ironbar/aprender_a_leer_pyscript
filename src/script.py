@@ -1,5 +1,4 @@
 import random
-from xml.dom.minidom import Element
 
 from pyodide import create_proxy
 
