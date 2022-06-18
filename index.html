@@ -59,6 +59,24 @@
             background: #04AA6D;
             cursor: pointer;
         }
+
+        .button {
+            border: 2px solid rgb(22, 63, 9);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #c2f3c2;
+        }
+        .text_input {
+            width: 100%;
+        }
+
     </style>
     <py-env>
         - paths:
@@ -73,7 +91,7 @@
     </div> -->
     <div class="container">
         <div>
-            <button>Click para nueva palabra</button><hr>
+            <button class="button">Click para nueva palabra</button><hr>
             <div>
                 <div>
                     <p>Número de letras: <span id="n_letters_value"></span></p>
@@ -87,7 +105,7 @@
                     Letras prohibidas
                 </div>
                 <div>
-                    <input id="forbidden_letters" type="text" placeholder="Escribe aquí las letras prohibidas">
+                    <input id="forbidden_letters" type="text" placeholder="Escribe aquí las letras prohibidas" class="text_input">
                 </div>
             </div><hr>
             <div>
@@ -95,7 +113,7 @@
                     Letras obligatorias
                 </div>
                 <div>
-                    <input id="required_letters" type="text" placeholder="Escribe aquí las letras que quieras que aparezcan">
+                    <input id="required_letters" type="text" placeholder="Escribe aquí las letras que quieras que aparezcan" class="text_input">
                 </div>
             </div>
         </div>
