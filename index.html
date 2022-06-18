@@ -115,7 +115,7 @@
         <div id="controls">
             <div class="control_box">
                 <div>
-                    <p>Número de letras: <span id="n_letters_value"></span></p>
+                    <p>Número de letras: <span id="n_letters_value">5</span></p>
                 </div>
                 <div>
                     <input type="range" min="2" max="10" value="5" class="slider" id="n_letters">
@@ -145,14 +145,6 @@
             <div id="output" class="output_box">hola</div>
         </div>
         <py-script src="src/random_words.py"></py-script>
-        <script>
-            var slider = document.getElementById("n_letters");
-            var output = document.getElementById("n_letters_value");
-            output.innerHTML = slider.value;
-            slider.oninput = function() {
-              output.innerHTML = this.value;
-            }
-        </script>
     </div>
 </body>
 
