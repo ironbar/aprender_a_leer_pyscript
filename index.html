@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <style>
+        body {
+          background-color: #eee;
+        }
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: minmax(200px, auto);
+          grid-gap: 1em;
+          margin-top: 1em;
+        }
+        .container > div:first-child {
+          grid-row: 1/3;
+        }
+        .container > div {
+          background-color: #fff;
+          box-shadow: 0px 5px 10px #ccc;
+          padding: 10px;
+        }
+    </style>
+    <py-env>
+        - paths:
+            - data/most-common-spanish-words-v5.txt
+    </py-env>
+</head>
+
+<body>
+    <py-title>Aprende a leer</py-title>
+    <div class="container">
+        <div>
+            <button>Nueva palabra</button>
+            <div>
+                <input type="range" min="2" max="10" value="5" class="slider" id="n_letters">
+            </div>
+        </div>
+        <div>
+            <b>Output</b><hr>
+            <div id="output"></div>
+        </div>
+        <div>
+            <b>Errors and Warnings</b><hr>
+            <div id="errors"></div>
+        </div>
+    </div>
+    <py-script src="/src/script.py"></py-script>
+    <!-- <py-script>
+import random
+from pyodide import create_proxy
+
+def on_click(event):
+    n_letters = Element("n_letters").value
+    output = Element("output")
+    output.write(n_letters)
+
+button = document.querySelector("button")
+button.addEventListener("click", create_proxy(on_click))
+    </py-script> -->
+    <py-repl></py-repl>
+</body>
+
+</html>
