@@ -41,6 +41,18 @@
             <div>
                 <input type="range" min="2" max="10" value="5" class="slider" id="n_letters">
             </div>
+            <div>
+                <div>
+                    Letras prohibidas
+                </div>
+                <div>
+                    <input id="fobidden_letters" type="text" placeholder="">
+                </div>
+            </div>
+            <div>
+                Letras obligatorias
+                <input id="required_letters" type="text" placeholder="">
+            </div>
         </div>
         <div>
             <b>Output</b><hr>
@@ -48,19 +60,6 @@
         </div>
     </div>
     <py-script src="/src/script.py"></py-script>
-    <!-- <py-script>
-import random
-from pyodide import create_proxy
-
-def on_click(event):
-    n_letters = Element("n_letters").value
-    output = Element("output")
-    output.write(n_letters)
-
-button = document.querySelector("button")
-button.addEventListener("click", create_proxy(on_click))
-    </py-script> -->
-    <py-repl></py-repl>
 </body>
 
 </html>
