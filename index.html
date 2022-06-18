@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aprender a leer</title>
-    <!-- <link rel="stylesheet" href="/pyscript.css" />
-    <script defer src="/pyscript.js"></script> -->
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <style>
@@ -28,9 +26,14 @@
           background-color: #fff;
           box-shadow: 0px 5px 10px #ccc;
           padding: 10px;
+          border-radius: 2vw;
         }
         .output_box {
             font-size: 8vw;
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 1.75em;
+            margin-bottom: 1.75em;
         }
         .control_box {
             margin-top: 0.5em;
@@ -40,7 +43,7 @@
         .slider {
             -webkit-appearance: none;
             width: 100%;
-            height: 25px;
+            height: 8vw;
             background: #d3d3d3;
             outline: none;
             opacity: 0.7;
@@ -55,8 +58,8 @@
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 25px;
-            height: 25px;
+            width: 4vw;
+            height: 8vw;
             background: #04AA6D;
             cursor: pointer;
         }
@@ -70,13 +73,14 @@
 
         .button {
             border: 2px solid rgb(22, 63, 9);
-            padding: 32px 32px;
+            padding: 4vw 1vw;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 2vw;
+            font-size: 3vw;
             transition-duration: 0.4s;
             width: 100%;
+            border-radius: 2vw;
         }
         .button:hover {
             background-color: #c2f3c2;
@@ -85,6 +89,13 @@
             width: 100%;
             font-size: 2vw;
             border: 1px solid rgb(22, 63, 9);
+        }
+        .web_title {
+            margin-top: 0.5em;
+            width: 100%;
+            font-size: 4vw;
+            text-align: center;
+            color: #04AA6D;
         }
 
     </style>
@@ -95,7 +106,8 @@
 </head>
 
 <body>
-    <py-title>Aprende a leer</py-title>
+    <div class="web_title"><b>Aprende a leer</b></div>
+    <!-- <py-title>Aprende a leer</py-title> -->
     <!-- <div class="instructions">
         Genera palabras aleatorias con el número deseado de letras para aprender a leer. Se puede forzar a que las palabras tengan o no tengan determinadas letras
     </div> -->
@@ -130,7 +142,7 @@
             </div>
         </div>
         <div>
-            <div id="output" class="output_box"></div>
+            <div id="output" class="output_box">hola</div>
         </div>
         <py-script src="src/random_words.py"></py-script>
         <script>
