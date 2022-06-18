@@ -4513,7 +4513,6 @@ intenso
 hundir
 horizonte
 homo
-gilipollas
 francotirador
 feroz
 exploración
@@ -5338,7 +5337,6 @@ rasgo
 radical
 psicológico
 proteína
-polla
 periodismo
 percibir
 pediatría
